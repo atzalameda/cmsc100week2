@@ -17,7 +17,7 @@ app.route('/students')
 })*/
 
 app.use(require('body-parser')());
-app.use(require('method-override')());
+app.use(require('method-override')());//for the put and delete method
 app.use(require(__dirname+'/config/router')(express.Router()));
 
 var server = app.listen(5000, function(){
